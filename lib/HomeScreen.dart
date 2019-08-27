@@ -4,6 +4,7 @@ import 'AddTreeScreen.dart';
 import 'LongButtonContainer.dart';
 import 'MapScreen.dart';
 import 'ProfilePicture.dart';
+import 'SyncScreen.dart';
 
 class HomeScreen extends StatelessWidget {
 
@@ -34,7 +35,12 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: Colors.greenAccent,
                 actionColor: Colors.green,
                 icon: Icons.sync,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SyncScreen())
+                  );
+                },
               ),
               SizedBox(height: 16,),
               Row(

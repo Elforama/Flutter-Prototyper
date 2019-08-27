@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'CameraScreen.dart';
+
 class ProfilePicture extends StatelessWidget {
 
   @override
@@ -13,7 +15,12 @@ class ProfilePicture extends StatelessWidget {
           fillColor: Colors.grey,
           shape: CircleBorder(),
           elevation: 4.0,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CameraScreen())
+            );
+          },
         )
     );
   }
@@ -32,7 +39,12 @@ class TreePicture extends StatelessWidget {
           fillColor: Colors.grey,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           elevation: 4.0,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CameraScreen())
+            );
+          },
         )
     );
   }
