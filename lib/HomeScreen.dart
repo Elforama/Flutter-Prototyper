@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'AddTreeScreen.dart';
 import 'LongButtonContainer.dart';
 import 'MapScreen.dart';
 import 'ProfilePicture.dart';
@@ -21,7 +22,12 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: Colors.redAccent[100],
                 actionColor: Colors.red,
                 icon: Icons.transfer_within_a_station,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AddTreeScreen())
+                  );
+                },
               ),
               SizedBox(height: 16,),
               LongButtonContainer(

@@ -7,7 +7,8 @@ class ActionButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Color color;
 
-  ActionButton({this.iconData, this.onPressed, this.color});
+
+  ActionButton({this.iconData, this.onPressed, this.color = Colors.green});
 
   @override
   Widget build(BuildContext context) {
