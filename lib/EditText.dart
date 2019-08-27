@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class EditText extends StatelessWidget {
 
   final String hint;
-  final IconData icon;
+  final Icon icon;
 
   EditText({this.hint, this.icon});
 
@@ -16,7 +16,7 @@ class EditText extends StatelessWidget {
       decoration: InputDecoration(
           hintText: hint,
           border: OutlineInputBorder(),
-          icon: Icon(icon)
+          icon: icon
       ),
     );
   }

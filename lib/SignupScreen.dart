@@ -29,7 +29,7 @@ class SignupScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: EditText(
                       hint: "First Name",
-                      icon: Icons.text_format
+                      icon: Icon(Icons.text_format)
                   ),
                 ),
                 SizedBox(height: 8),
@@ -37,7 +37,7 @@ class SignupScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: EditText(
                     hint: "Last Name",
-                    icon: Icons.text_format
+                    icon: Icon(Icons.text_format)
                   ),
                 ),
                 SizedBox(height: 8),
@@ -45,7 +45,7 @@ class SignupScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: EditText(
                       hint: "Organization",
-                      icon: Icons.text_format
+                      icon: Icon(Icons.text_format)
                   ),
                 ),
                 SizedBox(height: 16),

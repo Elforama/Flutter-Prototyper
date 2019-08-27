@@ -11,6 +11,9 @@ class CameraScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: <Widget>[
+          Container(
+            color: Colors.grey[400],
+          ),
           Align(
             alignment: AlignmentDirectional.bottomCenter,
             child: Container(

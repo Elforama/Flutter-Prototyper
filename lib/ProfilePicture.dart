@@ -12,7 +12,7 @@ class ProfilePicture extends StatelessWidget {
         width: 180.0,
         height: 180.0,
         child: RawMaterialButton(
-          fillColor: Colors.grey,
+          fillColor: Colors.grey[400],
           shape: CircleBorder(),
           elevation: 4.0,
           onPressed: () {
@@ -36,7 +36,7 @@ class TreePicture extends StatelessWidget {
         width: 300.0,
         height: 300.0,
         child: RawMaterialButton(
-          fillColor: Colors.grey,
+          fillColor: Colors.grey[400],
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           elevation: 4.0,
           onPressed: () {

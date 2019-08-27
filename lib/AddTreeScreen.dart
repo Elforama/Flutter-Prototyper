@@ -22,8 +22,11 @@ class AddTreeScreen extends StatelessWidget {
             child: TreePicture()
           ),
           SizedBox(height: 32,),
-          EditText(
-            hint: "Notes",
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: EditText(
+              hint: "Notes",
+            ),
           ),
           SizedBox(height: 100,),
           ActionButton(
