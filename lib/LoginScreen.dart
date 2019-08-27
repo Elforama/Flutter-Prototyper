@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'ActionButton.dart';
+import 'CameraScreen.dart';
+import 'EditText.dart';
 import 'SignupScreen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -37,23 +39,17 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(height: 32),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              hintText: "Email",
-                              border: OutlineInputBorder(),
-                              icon: Icon(Icons.email)
-                          ),
+                        child: EditText(
+                            hint: "Email",
+                            icon: Icon(Icons.email)
                         ),
                       ),
                       SizedBox(height: 8),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              hintText: "Phone",
-                              border: OutlineInputBorder(),
-                              icon: Icon(Icons.phone)
-                          ),
+                        child: EditText(
+                            hint: "Phone",
+                            icon: Icon(Icons.phone)
                         ),
                       ),
                       SizedBox(height: 56),
@@ -62,7 +58,11 @@ class LoginScreen extends StatelessWidget {
                         child: ActionButton(
                           iconData: Icons.arrow_forward,
                           color: Colors.green,
-                          onPressed: () {
+                          onPressed: () async {
+                            await Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => CameraScreen())
+                            );
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => SignupScreen())

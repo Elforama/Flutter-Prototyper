@@ -15,7 +15,9 @@ class EditText extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
           hintText: hint,
-          border: OutlineInputBorder(),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(94),
+          ),
           icon: icon
       ),
     );

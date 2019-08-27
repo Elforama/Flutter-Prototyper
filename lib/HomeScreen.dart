@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'AddTreeScreen.dart';
+import 'CameraScreen.dart';
 import 'LongButtonContainer.dart';
 import 'MapScreen.dart';
 import 'ProfilePicture.dart';
@@ -23,7 +24,11 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: Colors.redAccent[100],
                 actionColor: Colors.red,
                 icon: Icons.transfer_within_a_station,
-                onPressed: () {
+                onPressed: () async {
+                  await Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CameraScreen())
+                  );
                   Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => AddTreeScreen())
