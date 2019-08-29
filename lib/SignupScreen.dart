@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'ActionButton.dart';
 import 'EditText.dart';
 import 'HomeScreen.dart';
+import 'PrivacyPolicyScreen.dart';
 import 'ProfilePicture.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -59,7 +60,7 @@ class SignupScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeScreen())
+                          MaterialPageRoute(builder: (context) => PrivacyPolicyScreen())
                       );
                     },
                   ),
