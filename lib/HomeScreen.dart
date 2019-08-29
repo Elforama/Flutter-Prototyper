@@ -24,6 +24,10 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: Colors.redAccent[100],
                 actionColor: Colors.red,
                 icon: Icons.transfer_within_a_station,
+                child: Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Icon(Icons.gps_fixed, color: Colors.yellow, size: 36,),
+                ),
                 onPressed: () async {
                   await Navigator.push(
                       context,
@@ -40,6 +44,10 @@ class HomeScreen extends StatelessWidget {
                 backgroundColor: Colors.greenAccent,
                 actionColor: Colors.green,
                 icon: Icons.sync,
+                child: Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Text("4920"),
+                ),
                 onPressed: () {
                   Navigator.push(
                       context,

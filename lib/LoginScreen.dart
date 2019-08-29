@@ -40,16 +40,17 @@ class LoginScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
                         child: EditText(
-                            hint: "Email",
-                            icon: Icon(Icons.email)
+                          autoFocus: true,
+                          hint: "Email",
+                          icon: Icon(Icons.email)
                         ),
                       ),
                       SizedBox(height: 8),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
                         child: EditText(
-                            hint: "Phone",
-                            icon: Icon(Icons.phone)
+                          hint: "Phone",
+                          icon: Icon(Icons.phone)
                         ),
                       ),
                       SizedBox(height: 56),

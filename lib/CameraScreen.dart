@@ -15,6 +15,13 @@ class CameraScreen extends StatelessWidget {
             color: Colors.grey[400],
           ),
           Align(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 42.0, top: 82),
+              child: Icon(Icons.gps_off, color: Colors.red,)
+            ),
+            alignment: AlignmentDirectional.topEnd,
+          ),
+          Align(
             alignment: AlignmentDirectional.bottomCenter,
             child: Container(
               height: 200,

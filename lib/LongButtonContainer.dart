@@ -12,8 +12,9 @@ class LongButtonContainer extends StatelessWidget {
   final VoidCallback onPressed;
   final IconData icon;
   final AlignmentDirectional buttonAlignment;
+  final Widget child;
 
-  LongButtonContainer({this.backgroundColor, this.actionColor, this.onPressed, this.icon, this.buttonAlignment = AlignmentDirectional.centerEnd});
+  LongButtonContainer({this.backgroundColor, this.actionColor, this.onPressed, this.icon, this.buttonAlignment = AlignmentDirectional.centerEnd, this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -24,16 +25,27 @@ class LongButtonContainer extends StatelessWidget {
           color: backgroundColor,
           borderRadius: BorderRadius.circular(24)
       ),
-      child: Align(
-        alignment: buttonAlignment,
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: ActionButton(
-            iconData: icon,
-            onPressed: onPressed,
-            color: actionColor,
+      child: Stack(
+        children: <Widget>[
+          Align(
+            alignment: buttonAlignment,
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: ActionButton(
+                iconData: icon,
+                onPressed: onPressed,
+                color: actionColor,
+              ),
+            ),
           ),
-        ),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: child
+            ),
+          ),
+        ],
       ),
     );
   }

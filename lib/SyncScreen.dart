@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import 'ActionButton.dart';
+import 'Graph.dart';
 
 class SyncScreen extends StatefulWidget {
 
@@ -42,6 +43,12 @@ class _SyncScreenState extends State<SyncScreen> {
                   color: Colors.grey[300],
                 ),
               ),
+              SizedBox(height: 36,),
+              SizedBox(
+                height: 200,
+                width: 300,
+                child: OrdinalInitialViewport.withSampleData()
+              )
             ],
           ),
           Align(
