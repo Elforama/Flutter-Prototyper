@@ -1,6 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
+import 'package:greenstand_prototype/web/WebHome.dart';
+import 'HomeScreen.dart';
 import 'LoginScreen.dart';
+import 'ResponsiveHome.dart';
+import 'UserFlows.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: ResponsiveHome(),
     );
   }
 }

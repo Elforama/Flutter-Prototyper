@@ -28,14 +28,10 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(24.0),
                   child: Icon(Icons.gps_fixed, color: Colors.yellow, size: 36,),
                 ),
-                onPressed: () async {
-                  await Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => CameraScreen())
-                  );
+                onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AddTreeScreen())
+                      MaterialPageRoute(builder: (context) => CameraScreen(nextScreen: (context) => AddTreeScreen()))
                   );
                 },
               ),

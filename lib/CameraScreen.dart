@@ -6,6 +6,10 @@ import 'ActionButton.dart';
 
 class CameraScreen extends StatelessWidget {
 
+  final WidgetBuilder nextScreen;
+
+  CameraScreen({this.nextScreen});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +32,14 @@ class CameraScreen extends StatelessWidget {
               child: ActionButton(
                 iconData: Icons.camera_alt,
                 onPressed: () {
-                  Navigator.pop(context);
+                  if (nextScreen == null) {
+                    Navigator.pop(context);
+                  } else {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: nextScreen)
+                    );
+                  }
                 },
               ),
             ),

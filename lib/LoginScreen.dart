@@ -59,14 +59,10 @@ class LoginScreen extends StatelessWidget {
                         child: ActionButton(
                           iconData: Icons.arrow_forward,
                           color: Colors.green,
-                          onPressed: () async {
-                            await Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => CameraScreen())
-                            );
+                          onPressed: () {
                             Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => SignupScreen())
+                                context,
+                                MaterialPageRoute(builder: (context) => CameraScreen(nextScreen: (context) => SignupScreen()))
                             );
                           },
                         ),
